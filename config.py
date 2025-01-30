@@ -34,5 +34,5 @@ class TrainingConfig:
     batch_size: int = 64
 
     device: str = str(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
-    dtype: str = "bfloat16"
+    dtype: str = "float16"
     compile: bool = True

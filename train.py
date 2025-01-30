@@ -25,7 +25,7 @@ torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
 torch.set_float32_matmul_precision("high")
 
-ctx = torch.autocast(train_config.device, dtype=torch.bfloat16)
+ctx = torch.autocast(train_config.device, dtype=torch.float16)
 
 model_args = dict(
     n_layer=GPTConfig.n_layer,
