@@ -16,7 +16,7 @@ class GPTConfig:
 @dataclass
 class TrainingConfig:
     learning_rate: float = 6e-4
-    max_iters: int = 30000
+    max_iters: int = 300
     weight_decay: float = 1e-1
     beta1: float = 0.9
     beta2: float = 0.95
