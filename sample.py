@@ -83,7 +83,7 @@ def setup_device(args):
 
 
 def load_model(args):
-    ckpt_path = os.path.join(args.ckpt_dir, "ckpt-v1.pt")
+    ckpt_path = os.path.join(args.ckpt_dir, "ckpt.pt")
     checkpoint = torch.load(ckpt_path, map_location=args.device)
     gptconf = GPTConfig(**checkpoint["model_args"])
     model = GPT(gptconf)
